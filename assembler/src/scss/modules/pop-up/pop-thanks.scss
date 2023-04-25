@@ -1,9 +1,0 @@
-.pop__thanks {
-  opacity: 0;
-  pointer-events: none;
-  transition: .3s;
-  &.active {
-    opacity: 1;
-    pointer-events: visible;
-  }
-}
