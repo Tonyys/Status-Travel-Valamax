@@ -1,0 +1,129 @@
+.header {
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.04), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0287542), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0238443), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.02), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0161557), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0112458);
+  transition: .2s border-radius;
+  &__logo {
+    a {
+      max-width: 156px;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__mobile-menu {
+    padding: 78px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+
+    }
+    a {
+      font-size: 20px;
+      color: $main-black;
+      line-height: 1;
+    }
+  }
+  &__menu {
+    display: none;
+    padding: 0;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-right: auto;
+    @media (min-width: 1240px) {
+      display: flex;
+    }
+    ul {
+      gap: 20px;
+      flex-direction: row;
+      @media (min-width: 1024px) {
+        gap: 15px;
+      }
+      @media (min-width: 1240px) {
+        display: flex;
+      }
+      @media (min-width: 1304px) {
+        gap: 20px;
+      }
+      li {
+        @media (min-width: 1024px) {
+          display: flex;
+          align-items: center;
+        }
+      }
+      a {
+        font-size: 16px;
+        transition: .3s;
+        &:hover {
+          color: $main-blue;
+          opacity: .5;
+        }
+      }
+    }
+  }
+  &.active {
+    border-radius: 16px;
+  }
+  &__phones {
+    &:not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.16);
+      padding-right: 16px;
+    }
+    & span {
+      transition: .3s;
+    }
+    @media (min-width: 1024px) {
+      &:hover {
+        span {
+          color: $main-blue;
+          opacity: .5;
+        }
+      }
+    }
+  }
+  .burger {
+    height: 16px;
+    position: relative;
+    &__items {
+      transition: .3s;
+      position: absolute;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: calc(50% - 1px);
+      }
+      &:nth-child(3) {
+        bottom: 0;
+      }
+    }
+    &.active {
+      .burger__items {
+        border-color: $main-black;
+        background-color: $main-black;
+      }
+      .burger__items:nth-child(1) {
+        transform: rotate(45deg);
+        top: 8px;
+      }
+      .burger__items:nth-child(2) {
+        opacity: 0;
+      }
+      .burger__items:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 6px;
+      }
+    }
+  }
+}
+
+
+
+

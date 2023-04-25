@@ -1,0 +1,22 @@
+.car-park {
+  &__card {
+    &:hover {
+        .car-park__bg {
+          @media (min-width: 1024px) {
+            background-color: rgba(254, 209, 24, 0.12);
+          }
+        }
+        //.car-park__btn {
+        //  @media (min-width: 1024px) {
+        //    color: white;
+        //    background-color: #FED118;
+        //  }
+        //}
+    }
+    &-name {
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
